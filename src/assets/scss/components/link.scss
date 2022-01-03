@@ -1,0 +1,19 @@
+.button-link {
+    background-color: rgb(165, 36, 36);
+    border: none;
+    padding: .8em 1.8em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .7rem;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.button-link:hover {
+    color: rgb(165, 36, 36);
+    background-color: white;
+    cursor: pointer;
+}

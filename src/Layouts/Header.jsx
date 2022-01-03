@@ -1,11 +1,13 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import ButtonLink from "../Components/ButtonLink";
 import daddypool from "../assets/img/logo-daddy-e1630317717270.png";
 import "../assets/scss/layouts/header.scss";
+import background from "../assets/img/TERRASSE-1500x1000.jpg";
 
 const Header = () => {
     return (
-        <header className="Header">
+        <header className="Header d-flex flex-column align-items-center">
             <Navbar bg="light" expand="lg">
                 <Container className="header-nav">
                     <Navbar.Brand href="#home">
@@ -30,6 +32,20 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <div className="bg d-flex flex-column align-items-center justify-content-center" 
+                style={{ 
+                    backgroundImage: `url(${background}) no-repeat center`, 
+                    padding: `5em 3em`,
+                    width: `100%`,
+                    height: `500px`,
+                    color: `#ffffff`,
+                    borderTopLeftRadius: `25px`,
+                    borderBottomRightRadius: `25px`,
+                }}>
+                <h1 className="text-center">Un concept unique</h1>
+                <p>Confort, convivialité, sérénité : en mode Daddy Pool pour un séjour inoubliable</p>
+                <ButtonLink href="#residence">Nos Résidence DaddyPool</ButtonLink>
+            </div>
 
         </header>
     )

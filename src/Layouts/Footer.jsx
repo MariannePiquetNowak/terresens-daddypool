@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState } from 'react';
 import Form from "../Components/Form";
 import "../assets/scss/layouts/footer.scss";
 import logo from "../assets/img/Logo-HR-Bleu.svg"
