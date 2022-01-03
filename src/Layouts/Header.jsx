@@ -6,9 +6,23 @@ import "../assets/scss/layouts/header.scss";
 import background from "../assets/img/TERRASSE-1500x1000.jpg";
 
 const Header = () => {
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.navbar');
+        const navbarNav = document.querySelector('.navbar-nav');
+        if(window.pageYOffset > 250) {
+            nav.classList.add('navbar-scroll');   
+            navbarNav.classList.add('navbar-scroll');   
+
+        } else {
+            nav.classList.remove('navbar-scroll')
+            navbarNav.classList.remove('navbar-scroll');   
+
+        }
+    })
+
     return (
         <header className="Header d-flex flex-column align-items-center">
-            <Navbar bg="light" expand="lg" className="navbar-fixed-top">
+            <Navbar expand="lg" className="fixed-top">
                 <Container className="header-nav">
                     <Navbar.Brand href="#home">
                         <img
@@ -21,7 +35,7 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#concept">Le concept</Nav.Link>
                             <Nav.Link href="#residence">Les résidences</Nav.Link>
