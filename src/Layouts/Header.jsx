@@ -8,7 +8,7 @@ import background from "../assets/img/TERRASSE-1500x1000.jpg";
 const Header = () => {
     return (
         <header className="Header d-flex flex-column align-items-center">
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="light" expand="lg" className="navbar-fixed-top">
                 <Container className="header-nav">
                     <Navbar.Brand href="#home">
                         <img

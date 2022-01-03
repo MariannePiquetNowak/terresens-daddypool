@@ -1,14 +1,15 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
+import ButtonLink from '../Components/ButtonLink';
 
-const ConceptCol = (props) => {
-    return (
-
-        <Col className={props.class} xs={12} sm={3}>
-            <div className="concept-col__text">
+const ResidenceCol = (props) => {
+    return(
+        <Col className={props.class} md={12} lg={12} xl={12}>
+            <div className="residence__text">
                 <span>{props.category}</span>
                 <h4>{props.title}</h4>
                 <p>{props.children}</p>
+                <ButtonLink>Télécharger la brochure</ButtonLink>
             </div>
             <div 
                 className={props.display}
@@ -17,8 +18,7 @@ const ConceptCol = (props) => {
                 }}
             ></div>
         </Col>
-
     )
 }
 
-export default ConceptCol;
+export default ResidenceCol;

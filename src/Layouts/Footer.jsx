@@ -22,7 +22,7 @@ const Footer = () => {
    
   
     return (
-        <footer className="Footer">
+        <footer className="Footer" id="contact">
             <div className="footer-container container-md">
                 <h3>Réservez vite votre Daddy Pool</h3>
                 <p>Le premier LMNP récupérable en résidence secondaire</p>
@@ -35,7 +35,7 @@ const Footer = () => {
                 )}
 
             </div>
-            <span className="brand-footer">Powered by <img src={logo} /> Terrésens</span>
+            <span className="brand-footer">Powered by <img src={logo} alt="terrésens-logo"/> Terrésens</span>
         </footer>
     )
 }

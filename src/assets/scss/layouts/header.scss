@@ -1,9 +1,15 @@
 .Header .navbar {
     height: 8em;
     background-color: white !important;
+    width: 100%;
 
     .navbar-brand {
         margin-right: 4rem;
+    }
+
+    .basic-navbar-nav{
+        display:flex;
+        justify-content: flex-end !important;
     }
     .navbar-nav {
         width: 800px;
@@ -39,6 +45,7 @@
     width: 100%;
     height: 100%;
 }
+
 
 @media screen and (min-width: 1200px) {
     .Header {

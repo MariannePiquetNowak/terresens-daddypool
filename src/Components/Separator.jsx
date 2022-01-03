@@ -3,7 +3,7 @@ import "../assets/scss/components/separator.scss";
 
 const Separator = (props) => {
     return (
-        <div className="Separator">
+        <div className="Separator" id={props.id}>
             <div className="Separator__top"></div>
             <div className="Separator__bottom"></div>
             <div className="Separator__text">{props.children}</div>
