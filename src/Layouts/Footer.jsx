@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Form from "../Components/Form";
 import "../assets/scss/layouts/footer.scss";
 import logo from "../assets/img/Logo-HR-Bleu.svg"
@@ -14,20 +14,24 @@ const Footer = () => {
         setIsOpen(true)
     }
 
+
     const closeForm = () => {
         setIsOpen(false)
     }
 
+   
+  
     return (
         <footer className="Footer">
-            <div className="footer-container">
+            <div className="footer-container container-md">
                 <h3>Réservez vite votre Daddy Pool</h3>
                 <p>Le premier LMNP récupérable en résidence secondaire</p>
 
                 {isOpen ? (
-                    <Form close={closeForm} />
+                    <Form className="form" close={closeForm} />
+
                 ) : (
-                    <Button type="button" onClick={openForm} className="show">Prenez contact</Button>
+                    <Button type="button" onClick={openForm} className="show">Prenez contact</Button>                    
                 )}
 
             </div>
