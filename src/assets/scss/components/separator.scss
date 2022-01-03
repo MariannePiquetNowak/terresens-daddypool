@@ -1,0 +1,30 @@
+.separator {    
+    width: 100%;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__top {
+        border-top: 1px solid rgb(1, 13, 124);
+        width: 80px;
+    }
+
+    &__bottom {
+        background-color: rgb(165, 36, 36);
+        height: 5px !important;
+        width: 80px;
+        margin-bottom: 1.5em;
+        margin-top: 0.5px;
+
+    }
+    
+    &__text {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: .6rem;
+        opacity: .5;
+        letter-spacing:1px;
+    }
+}

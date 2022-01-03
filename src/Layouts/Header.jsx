@@ -34,7 +34,7 @@ const Header = () => {
             </Navbar>
             <div className="bg d-flex flex-column align-items-center justify-content-center" 
                 style={{ 
-                    backgroundImage: `url(${background}) no-repeat center`, 
+                    backgroundImage: `url(${background})`, 
                     padding: `5em 3em`,
                     width: `100%`,
                     height: `500px`,
