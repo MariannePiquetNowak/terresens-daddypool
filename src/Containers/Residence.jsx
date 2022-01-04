@@ -7,7 +7,7 @@ import '../assets/scss/containers/residence.scss';
 
 const Residence = (props) => {
     return(
-        <div className="Residence">
+        <section className="Residence">
             <h3 className="text-center">Des emplacements prenium & une ambiance détente dans les plus belles stations de ski</h3>
             <Container>
                 <Row>
@@ -58,7 +58,7 @@ const Residence = (props) => {
                     </ResidenceCol>
                 </Row>
             </Container>
-        </div>
+        </section>
     )
 }
 

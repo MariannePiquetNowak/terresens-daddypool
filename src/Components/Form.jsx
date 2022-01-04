@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
 import Button from "../Components/Button";
 import '../assets/scss/components/form.scss';
 import 'animate.css';
-
-
 
 
 const FormContact = (props) => {
@@ -37,43 +34,47 @@ const FormContact = (props) => {
                 <input type="hidden" name="zf_referrer_name" value="" />
                 <input type="hidden" name="zf_redirect_url" value="" />
                 <input type="hidden" name="zc_gad" value="" />
-                <h2>Formulaire</h2>
+                <h2>Formulaire de contact</h2>
                 <p></p>
+                <div className="labels-group d-flex flex-column">
+                    <div className="firstname d-flex flex-column ">
+                        <label>Prénom</label>
+                        <input type="text" maxlength="255" name="Name_First" fieldType="7" />
+                    </div>
+                    <div className="lastname d-flex flex-column">
+                        <label>Nom de famille</label>
+                        <input type="text" maxlength="255" name="Name_Last" fieldType="7" />
+                    </div>
 
-                <label>Prénom</label>
-                <input type="text" maxlength="255" name="Name_First" fieldType="7" />
+                    <label for="exampleForm.ControlInput1">E-mail</label>
+                    <input
+                        id="exampleForm.ControlInput1"
+                        placeholder="smith@example.com"
+                        type="email"
+                        maxlength="255"
+                        name="Email"
+                        value={email}
+                        fieldType="9 "
+                        onChange={handleChangeMail}
+                    />
 
-                <label>Nom de famille</label>
-                <input type="text" maxlength="255" name="Name_Last" fieldType="7" />
-
-                <label for="exampleForm.ControlInput1">E-mail</label>
-                <input
-                    id="exampleForm.ControlInput1"
-                    placeholder="smith@example.com"
-                    type="email"
-                    maxlength="255"
-                    name="Email"
-                    value={email}
-                    fieldType="9 "
-                    onChange={handleChangeMail}
-                />
-
-                <label>Numéro de téléphone</label>
-                <input
-                    type="text"
-                    compname="PhoneNumber"
-                    name="PhoneNumber_countrycode"
-                    phoneFormat="1"
-                    sCountryCodeEnabled="false"
-                    maxlength="20"
-                    value={phone}
-                    fieldType="11"
-                    id="international_PhoneNumber_countrycode"
-                    onChange={handleChangePhone}
-                />
-                <Button type="submit" className="submit"><em>Soumettre</em></Button>
+                    <label>Numéro de téléphone</label>
+                    <input
+                        type="text"
+                        compname="PhoneNumber"
+                        name="PhoneNumber_countrycode"
+                        phoneFormat="1"
+                        sCountryCodeEnabled="false"
+                        maxlength="20"
+                        value={phone}
+                        fieldType="11"
+                        id="international_PhoneNumber_countrycode"
+                        onChange={handleChangePhone}
+                    />
+                </div>
+                <Button type="submit" className="button"><em>Soumettre</em></Button>
             </form>
-            <Button type="button" onClick={props.close} className="show">Fermer</Button>
+            <Button type="button" onClick={props.close} className="btn-close"></Button>
         </div>
     )
 }

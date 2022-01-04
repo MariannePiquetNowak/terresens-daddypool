@@ -7,13 +7,13 @@ import '../assets/scss/containers/concept.scss';
 
 const Concept = (props) => {
 
-    const colMiddle = "concept-col middle d-flex flex-column-reverse";
-    const colFirst = "concept-col first d-flex flex-column";
-    const colLast = "concept-col last d-flex flex-column";
+    const colMiddle = "concept-col middle";
+    const colFirst = "concept-col first";
+    const colLast = "concept-col last";
 
 
     return (
-        <div className="Concept">
+        <section className="Concept">
             <h3 className="text-center">Des emplacements prenium & une ambiance détente dans les plus belles stations de ski</h3>
             <Container>
                 <Row>
@@ -77,7 +77,7 @@ const Concept = (props) => {
                     </ConceptCol>
                 </Row>
             </Container>
-        </div>
+        </section>
     )
 }
 

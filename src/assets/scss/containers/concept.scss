@@ -9,6 +9,12 @@
         margin-bottom:3em;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .row {
         display: flex;
         justify-content: center;
@@ -37,6 +43,8 @@
 }
 
 .middle {
+    display: flex !important;
+    flex-direction: column-reverse !important;
     .concept-col-img  {
         height: 200px;
         width: 250px;
@@ -46,11 +54,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin: .3em 0;
+
     }
 
 }
 
 .first {
+    display: flex !important;
+    flex-direction: column !important;
     .concept-col-img  {
         height: 200px;
         width: 250px;
@@ -59,11 +70,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
     }
 
 }
 
 .last {
+    display: flex !important;
+    flex-direction: column !important;
     .concept-col-img  {
         height: 200px;
         width: 250px;
@@ -72,6 +86,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
     }
 
 }
@@ -84,3 +99,47 @@
 
 .concept-col-img-none { display: none; }
 
+@media screen and (max-width: 990px) {
+    .row {
+        flex-direction: column !important;
+    }
+
+    .concept-col {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        &__text {width: 70%;}
+
+        .concept-col-img {
+            width: 100% !important;
+            margin: 1em;
+        }
+    }
+
+    .middle {
+        flex-direction: row-reverse !important;
+        .concept-col-img { 
+            border-top-right-radius: 0 !important;
+            border-bottom-left-radius: 25px !important;
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 574px) {
+
+    .Concept > h3 {width: 100% !important}
+
+    .row {align-items: center;}
+
+    .concept-col {
+        flex-direction: column !important;
+
+        &__text {width: 100%;}
+        .concept-col-img { margin: 0; }
+    }
+    .middle {
+        flex-direction: column !important;
+    }
+}

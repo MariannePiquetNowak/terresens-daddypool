@@ -5,14 +5,14 @@ import "../assets/scss/layouts/footer.scss";
 import logo from "../assets/img/Logo-HR-Bleu.svg"
 
 import Button from '../Components/Button';
-import { createPortal } from 'react-dom';
+
 
 
 const Footer = () => {
 
     const [Modal, open, close, isOpen] = useModal('root', {
-        preventScroll: true,
-        closeOnOverlayClick: false,
+        preventScroll: false,
+        closeOnOverlayClick: true,
     });
 
     return (
@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="footer-container container-md">
                 <h3>Réservez vite votre Daddy Pool</h3>
                 <p>Le premier LMNP récupérable en résidence secondaire</p>
-                <Button type="button" onClick={open} className="show">Prenez contact</Button>
+                <Button type="button" onClick={open} className="button">Prenez contact</Button>
                 <Modal>
                     <Form className="form" type="submit" close={close} />
                 </Modal>

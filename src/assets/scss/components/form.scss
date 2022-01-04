@@ -5,21 +5,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    width: 500px !important;
 
-form {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-    width: 100% !important;
+    form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        width: 100% !important;
+    
+        .form-control {
+            margin: .7em 0;
+        }
 
-    .form-control {
-        margin: .7em 0;
+        label { margin-top: .5em; color: #29235C}
+        input { border-radius: 5px; border: 1px solid #29235C}
+
     }
 }
 
+
+
 .button {
     margin-top: 1.5em;
+}
+
+.btn-close {
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50% !important;
+    background-color: #a52424 !important;
+    opacity: 1 !important;
+    color: white !important;
+    position: absolute;
+    top: -20px;
+    right: 0;
 }
 
 @media  screen and (max-width: 1200px) {

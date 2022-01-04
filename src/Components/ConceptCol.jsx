@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 const ConceptCol = (props) => {
     return (
 
-        <Col className={props.class} xs={12} sm={3}>
+        <Col className={props.class}>
             <div className="concept-col__text">
                 <span>{props.category}</span>
                 <h4>{props.title}</h4>

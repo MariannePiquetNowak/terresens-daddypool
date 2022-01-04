@@ -21,3 +21,9 @@
         font-weight: 300;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .Terresens {
+        .row {align-items: center;}
+    }
+}
