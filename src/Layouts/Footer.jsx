@@ -1,41 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useModal } from 'react-hooks-use-modal';
 import Form from "../Components/Form";
 import "../assets/scss/layouts/footer.scss";
 import logo from "../assets/img/Logo-HR-Bleu.svg"
 
 import Button from '../Components/Button';
+import { createPortal } from 'react-dom';
 
 
 const Footer = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [Modal, open, close, isOpen] = useModal('root', {
+        preventScroll: true,
+        closeOnOverlayClick: false,
+    });
 
-    const openForm = () => {
-        setIsOpen(true)
-    }
-
-
-    const closeForm = () => {
-        setIsOpen(false)
-    }
-
-   
-  
     return (
         <footer className="Footer" id="contact">
             <div className="footer-container container-md">
                 <h3>Réservez vite votre Daddy Pool</h3>
                 <p>Le premier LMNP récupérable en résidence secondaire</p>
-
-                {isOpen ? (
-                    <Form className="form" close={closeForm} />
-
-                ) : (
-                    <Button type="button" onClick={openForm} className="show">Prenez contact</Button>                    
-                )}
-
+                <Button type="button" onClick={open} className="show">Prenez contact</Button>
+                <Modal>
+                    <Form className="form" type="submit" close={close} />
+                </Modal>
             </div>
-            <span className="brand-footer">Powered by <img src={logo} alt="terrésens-logo"/> Terrésens</span>
+            <span className="brand-footer">Powered by <img src={logo} alt="terrésens-logo" /> Terrésens</span>
         </footer>
     )
 }

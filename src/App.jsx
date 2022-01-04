@@ -11,7 +11,7 @@ import Terresens from "./Containers/Terresens";
 
 function App() {
   return (
-   <div className="App container-lg d-flex flex-column justify-content-center">
+   <div className="App container-lg d-flex flex-column justify-content-center" id="home">
      <Layout>
       <Separator id="concept">Le concept Daddy Pool</Separator>
       <Concept />
